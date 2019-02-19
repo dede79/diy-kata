@@ -1,12 +1,11 @@
+//Good use of Math.ceil here. If you were to use Math.round, the code would fail
+//if the user was to arrive in one hour. Good job!
+
 const reachDestination = (distance, speed) => {
-   
-    const hours =(distance / speed) ;
+  //let time = Math.ceil(distance/speed);
+  let time = Math.ceil((distance / speed) * 2) / 2;
+  return `I should be there in ${time} hours.`;
 
-   // round up to nearest 0.5
-   const roundUp = (Math.round(hours * 2) / 2).toFixed(1);
-
-   // for some reason it returns a string value so had to parse to decimal number
-    return parseFloat(roundUp);
-}
+};
 
 module.exports = reachDestination;

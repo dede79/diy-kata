@@ -1,7 +1,8 @@
-const getEmployerRole = (employeeName, employees) => {
-    const findEmployee = employees.find(employee => employeeName === employee.name);
+//Very clear and concise. Perfect code for this problem. Well done
 
-    return findEmployee.role;
+const getEmployerRole = (employeeName, employees) => {
+  return employees.find(x => x.name === employeeName).role;
+
 }
 
 module.exports = getEmployerRole

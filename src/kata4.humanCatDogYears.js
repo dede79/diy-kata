@@ -1,28 +1,21 @@
+//Clear and concise but doesn't cover the eventuality of a user entering an unexpected
+//number, such as a 0 or a negative.
+
 const humanCatDogYears = (number) => {
-   // human age input
-   const humanYears = number;
+  let Human = number;
+  let Cat = 24 + ((number - 2) * 4);
+  let Dog = 24 + ((number - 2) * 5);
+  return [Human, Cat, Dog];
+};
 
-   // First and second year for cat and dog;
-   const catDogFirstSeconodYear = 15 + 9;;
+// formulas
+// 15+9+((number-2)*4) = cat
+// 24+((number-2)*4) = cat
 
-   // Cat years after first 2 years;
-   const catOtherYears = (humanYears - 2) * 4;
+// change 4 to 5 for the Dog
 
-   // Dog years after first 2 years;
-   const dogOtherYears = (humanYears - 2) * 5;
 
-   // Total dog years converted from humanYears input
-   let totalCatYears = catDogFirstSeconodYear + catOtherYears;
+// change 4 to 5 for the Dog
 
-   // Total dog years converted from humanYears input
-   let totalDogYrs = catDogFirstSeconodYear + dogOtherYears;
-
-   // Create the array of human, cat and dog years
-   let humanCatDogArr = [number,totalCatYears,totalDogYrs]
-
-   // output array above;
-   return humanCatDogArr;
-
-}
-
+ 
 module.exports = humanCatDogYears;
